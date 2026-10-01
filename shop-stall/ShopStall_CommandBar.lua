@@ -424,7 +424,8 @@ local function findOldShop()
 	for _, d in workspace:GetDescendants() do
 		if (d:IsA("Model") or d:IsA("Folder")) and not d:FindFirstChildWhichIsA("Humanoid") then
 			local n = d.Name:lower()
-			if d:GetAttribute(TAG) or n:find("shop") or n:find("stall") or n:find("store") then
+			-- exact names only, so things like "UpgradeWorkshop" are never touched
+			if d:GetAttribute(TAG) or n == "shop" or n == "stall" or n == "store" or n == "shopstall" then
 				table.insert(candidates, d)
 			end
 		end
