@@ -5,6 +5,7 @@ animated shopkeeper NPC (asset `11330911907`).
 
 **Files**
 - `ShopStall_CommandBar.lua`: paste into Studio's Command Bar.
+- `ShopkeeperAnimator.client.lua`: readable source of the NPC animation; run `python3 build.py` after editing it to update the Command Bar script.
 
 **Steps**
 1. Select your current shop model in the Explorer.

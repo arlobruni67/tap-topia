@@ -26,6 +26,8 @@ code; there is none beyond these folders:
 - Find targets via `Selection:Get()` first, then a name config, then auto-find by name.
 - Use `Enum.Material.Plastic` for parts so Retro Studs textures them.
 - The Command Bar can call `game:GetObjects("rbxassetid://ID")` and set `Script.Source`.
+- The Command Bar can't parse multi-line `[[...]]` strings or comments. Use `--`
+  comment lines, and embed long code as a table of one-line strings (see `shop-stall/build.py`).
 - Strip scripts from inserted free models.
 - For NPC animation, embed a `Script` with `RunContext = Client` inside the NPC.
   Drive Motor6D `C0` through springs (see `shop-stall/`) and support both R6 and R15.
